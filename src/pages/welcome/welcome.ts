@@ -14,7 +14,7 @@ export class WelcomePage {
 
   constructor( private viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams, public assetsServices: AssetsServices) {}
 
-
+ 
   ionViewWillEnter(){
     console.log("j'y suis de nouveau !");
   }
