@@ -29,7 +29,6 @@ export class WelcomePage {
   }
 
   doPageLogin() {
-    console.log("Aller vers loginpage");    
     this.navCtrl.push(LoginPage);
   }
 
