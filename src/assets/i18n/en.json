@@ -1,0 +1,65 @@
+{   
+    "appName" : "PARIS DELIGHT",
+    "loginPage":{
+        "buttons" : {
+            "login" : "Login",
+            "signup": "Signup",
+            "forgotPwd": "FORGOT PASSWORD?"
+        },
+        "text":{
+            "dontHaveAccount": "Don't have an account?"            
+        },
+        "input" : {
+            "email" : "Email Address",
+            "password" : "Password"
+        } 
+    },
+
+    "landingPage" : {
+        "buttons" : {
+            "login" : "LOGIN",
+            "signup": "SIGN UP",
+            "termeOfUse": "Terms of Use",
+            "privacyPolicy": "Privacy Policy"
+        },
+        "text":{
+            "agreeText": "By using our app, you agree to PARIS DELIGHT's",
+            "and" : "and"            
+        }
+    },
+    "signup" : {
+        "buttons" : {
+            "continue": "Continue",
+            "skip": "Skip",
+            "uploadPic": "Upload a Profile Picture",
+            "letsGo": "Let's Go!"
+        },
+        "text":{
+            "whatsUrName" : "What's Your Name?",
+            "whatsUrEmail" : "What's Your Email Address?",
+            "addPwd" : "Add a password."
+        },
+        "input" : {
+            "fullname":"Full Name",
+            "password":"Password",
+            "confPasswrd":"Confirm password",
+            "email" : "Email Address"       
+        }
+    },
+    "forgetPwdPage" : {
+        "title":"Forget password",
+        "buttons" : {
+            "reset": "Send Reset Link",                 
+            "emailUs" : "Try to Email Us."  
+        },
+        "text":{
+            "troubleLoggin" : "Trouble logging in?",
+            "enterEmail" : "Enter your email and we'll send you a link to get back into your account."
+        },
+        "input" : {
+            "fullname":"Full Name",
+            "email" : "Email Address",              
+            "otherIssues" : "Other issues?"               
+        }
+    }
+}

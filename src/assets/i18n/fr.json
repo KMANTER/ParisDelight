@@ -1,0 +1,64 @@
+{
+    "appName" : "PARIS DELIGHT",    
+    "loginPage":{
+        "buttons" : {
+            "login" : "Se connecter",
+            "signup": "Créer un compte",
+            "forgotPwd": "MOT DE PASSE OUBLIÉ?"
+        },
+        "text":{
+            "dontHaveAccount": "Vous n'avez pas de compte?"            
+        },
+        "input" : {
+            "email" : "Adresse e-mail",
+            "password" : "Mot de passe"
+        } 
+    },
+    "landingPage" : {
+        "buttons" : {
+            "login" : "SE CONNECTER",
+            "signup": "CREER UN COMPTE",
+            "termeOfUse": "les conditions d'utilisation",
+            "privacyPolicy": "la politique de confidentialité"
+        },
+        "text":{
+            "agreeText": "En utilisant notre application, vous acceptez",
+            "and": "et"           
+        }
+    },
+    "signup" : {
+        "buttons" : {
+            "continue": "Continuer",
+            "skip": "Suivant",
+            "uploadPic": "Ajouter une photo de profil",
+            "letsGo": "Allons-y!"
+        },
+        "text":{
+            "whatsUrName" : "Quel est votre nom?",
+            "whatsUrEmail" : "Quelle est votre adresse e-mail?",
+            "addPwd" : "Choisir un mot de passe."
+        },
+        "input" : {
+            "fullname":"Votre Nom",
+            "password":"Mot de passe",
+            "confPasswrd":"Confirmer mot de passe",
+            "email" : "Adresse e-mail"
+        }
+    },
+    "forgetPwdPage" : {
+        "title":"Mot de passe oublié",
+        "buttons" : {
+            "reset": "Envoyer Email",                 
+            "emailUs" : "Contactez-nous"  
+        },
+        "text":{
+            "troubleLoggin" : "Problème d'authentification",
+            "enterEmail" : "Entrez votre email et nous vous enverrons un lien pour réinitialiser votre mot de passe."
+        },
+        "input" : {
+            "fullname":"Nom",
+            "email" : "Adresse e-mail",              
+            "otherIssues" : "Autres problèmes"               
+        }
+    }
+}

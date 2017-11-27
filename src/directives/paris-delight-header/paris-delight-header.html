@@ -1,0 +1,19 @@
+<ion-navbar color="secondary" hideBackButton="true">
+        <ion-buttons left *ngIf="showBack=='true'">
+                <button icon-only ion-button (click)="goBackPage()">
+                        <ion-icon name="arrow-round-back"></ion-icon>
+                </button>
+        </ion-buttons>
+        <ion-title>{{title | translate}}</ion-title>
+        <ion-buttons end>
+                <button ion-button icon-only (click)="doSelectLanguage()">
+                    <ion-icon ios="ios-globe" md="md-globe"></ion-icon> 
+                    {{selectedLanguage}}
+                </button>
+             </ion-buttons>
+</ion-navbar>
+<ion-content>
+        <ion-select #sectionSelect [(ngModel)]="selectedLanguage"  (ionChange)="languageChange($event,selectedLanguage)">
+                <ion-option *ngFor="let lang of listLanguage" [value]="lang" >{{lang}}</ion-option>
+        </ion-select>
+</ion-content>

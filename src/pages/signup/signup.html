@@ -1,0 +1,18 @@
+<ion-header>
+        <paris-delight-header title="{{'landingPage.buttons.signup' | translate}}"></paris-delight-header>        
+</ion-header>
+
+<ion-content padding no-bounce>
+    <!--<ion-icon name="arrow-back" color="light" (click)="pressBack()"></ion-icon>-->
+
+    <form [formGroup]="form">
+        <ion-list no-lines>
+            <h3 ion-text class="title text-center" color="secondary">{{'signup.text.whatsUrName' | translate}}</h3>
+            <ion-item>                
+                <ion-icon name="contact" item-left></ion-icon>
+                <ion-input formControlName="username" type="text" placeholder="{{'signup.input.fullname' | translate}}"> </ion-input>                
+            </ion-item>
+            <button ion-button color="secondary" (click)="pressNext(form)" block>{{'signup.buttons.continue' | translate}}</button>
+        </ion-list>
+    </form>
+</ion-content>

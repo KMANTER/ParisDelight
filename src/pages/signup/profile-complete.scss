@@ -1,0 +1,48 @@
+page-profile-complete {    
+    ion-content {
+        background:  #edf3f7 !important;
+
+        form {
+            margin-top: calc(18%);
+            padding: 0.0rem;
+
+            p {
+                font-size: 1.4rem;
+
+                a {
+                    padding-left: 8px;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+        ion-item {
+            margin-top: 2.0rem !important;
+            padding: 0.2rem 0.8rem !important;
+            border-radius: 0.8rem !important;
+
+            ion-icon {
+                margin: 0 8px !important;
+                min-width: 0 !important;
+                font-size: 2.4rem;
+                color: #aaa !important;
+            }
+            ion-input .text-input {
+                font-size: 1.4rem !important;
+            }
+        }
+
+        button.submit {
+            margin-top: 1.2rem !important;
+            border-radius: 0.8rem !important;
+        }
+
+        .profile {
+            text-align: center;
+
+            img {
+                max-width: 120px;
+            }
+        }
+        
+    }
+}

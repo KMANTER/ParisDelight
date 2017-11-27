@@ -1,0 +1,43 @@
+<ion-content class="register-content" padding style="background-image:url(assets/img/paris-3-b.png);
+background-repeat:no-repeat;background-size:100% 100%">
+  <ion-row class="logo-row">
+    <ion-col width-67>
+      <img class="img-logo" src="assets/img/logo.png" alt="Paris Delight Logo" >
+    </ion-col>
+  </ion-row>
+  <div class="register-box">
+    <form (ngSubmit)="createAccount()" #registerForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            <h2 class="text-style">Registration</h2>
+            <ion-item>
+              <ion-input class="text-style" type="text" placeholder="Username" name="username" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input class="text-style" type="text" placeholder="Name" name="name" [(ngModel)]="userToRegister.name" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input class="text-style" type="text" placeholder="Email" name="email" [(ngModel)]="userToRegister.email" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input class="text-style" type="password" placeholder="Password" name="pwd" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-input class="text-style" type="password" placeholder="Confirm Password" name="confPwd" required></ion-input>
+            </ion-item>
+            <label style="color:crimson;"><span>*</span> Required Field</label>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn text-style" full type="submit" [disabled]="!registerForm.form.valid">Register</button>
+          <button ion-button class="register-btn text-style" block type="button" clear (click)="backToLogin()"><legend>or </legend> Login</button>
+        </ion-col>
+      </ion-row>
+      
+    </form>
+  </div>
+</ion-content>

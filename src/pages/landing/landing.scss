@@ -1,0 +1,15 @@
+page-landing {
+    .landing-page-body{
+        background-image:url(assets/img/paris-3-b.png);
+        background-repeat:no-repeat;
+        background-size:100% 100%;
+    }
+    .text-style{
+        color: #3B5998;
+        text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+      }
+    ion-grid {
+        height: 100%;
+        justify-content: center;
+    }
+}

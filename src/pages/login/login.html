@@ -1,0 +1,29 @@
+<ion-header>
+        <paris-delight-header title="{{'loginPAge.title' | translate}}"></paris-delight-header>        
+</ion-header>
+
+<ion-content padding no-bounce>
+    <form [formGroup]="form">
+        <ion-list no-lines>
+            <h1 ion-text class="title text-center" color="light">PARIS DELIGHT</h1>
+            <p class="subtitle text-center">Drive me to see the magic of Paris</p>
+            <ion-item>                
+                <ion-icon name="mail" item-left></ion-icon>
+                <ion-input formControlName="email" type="email" placeholder="{{'loginPage.input.email' | translate}}"> </ion-input>                
+            </ion-item>
+
+            <ion-item>
+                <ion-icon name="lock" item-left></ion-icon>
+                <ion-input formControlName="password" type="password" placeholder="{{'loginPage.input.password' | translate}}"></ion-input>
+            </ion-item>
+            
+            <button ion-button color="light" (click)="doLogin(form)" block outline>{{'loginPage.buttons.login' | translate}}</button>
+            <p ion-text color="light" class="text-center">
+                {{'loginPage.text.dontHaveAccount' | translate}}
+                <a ion-text color="light" (click)="doPageSignup()">{{'loginPage.buttons.signup' | translate}}.</a>
+            </p>
+            <button ion-button color="light" (click)="doForgotPassword()" clear block>{{'loginPage.buttons.forgotPwd' | translate}}</button>
+        </ion-list>
+    </form>
+  <!--</div>-->
+</ion-content>

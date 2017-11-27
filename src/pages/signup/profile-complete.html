@@ -1,0 +1,26 @@
+<ion-header>
+    <paris-delight-header title="{{'landingPage.buttons.signup' | translate}}"></paris-delight-header>        
+</ion-header>
+
+<ion-content padding no-bounce>
+    <form [formGroup]="form">
+        <ion-list no-lines>
+            <div class="profile">
+                <img [src]="form.value.photo || 'assets/img/Add_Photo.png'"><br>
+                <button ion-button small clear color="secondary" (click)="onUploadProfile()" >{{'signup.buttons.uploadPic' | translate}}</button>
+            </div>
+            
+            <button ion-button color="secondary"  (click)="onSubmit(form)" block class="submit">{{'signup.buttons.letsGo' | translate}}</button>
+            <ion-row>
+                    <ion-col width-25>
+                    </ion-col>                            
+                <ion-col>
+                    <button ion-button color="bg-grey" (click)="doSkip()" clear block>{{'signup.buttons.skip' | translate}} ></button>
+                </ion-col>
+                <ion-col width-25>
+                </ion-col>     
+            </ion-row>
+        </ion-list>
+    </form>
+</ion-content>
+

@@ -1,0 +1,37 @@
+<ion-content class="login-content" padding style="background-image:url(assets/img/paris-3-b.png);
+background-repeat:no-repeat;background-size:100% 100%">
+  <ion-row class="logo-row">
+    <ion-col></ion-col>
+    <ion-col width-67>
+      <img class="img-logo" src="assets/img/logo.png" alt="Paris Delight Logo" >
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+  <div class="login-box" >
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <ion-row>
+        <ion-col>
+          <ion-list inset>
+            <h2 class="text-style">Login</h2>
+            <ion-item>
+              <ion-input class="text-style" type="text" placeholder="Email" name="email" [(ngModel)]="registerCredentials.email" required></ion-input>
+            </ion-item>
+            
+            <ion-item>
+              <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" required></ion-input>
+            </ion-item>
+            
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn text-style" full type="submit" [disabled]="!loginForm.form.valid">Login</button>
+          <button ion-button class="login-btn text-style" block type="button" clear (click)="createAccount()">Create New Account</button>
+        </ion-col>
+      </ion-row>
+      
+    </form>
+  </div>
+</ion-content>
