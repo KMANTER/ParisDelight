@@ -4,9 +4,90 @@ page-home {
       padding-bottom: 20px;
       margin-top: 400px; 
     }
+
+    .tile {
+      color: #fff;
+      height: 100px;
+      padding: 10px;
+    }
+    .tile-double {
+      height: 200px;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: left top;
+    }
+    .tile + .tile {
+      margin-top: 10px;
+      height: 90px;
+    }
+    .tile-icon {
+      padding: 0;
+      text-align: center;
+      font-size: 40px;
+      line-height: 100px;
+    }
+    .tile-title {
+      position: relative;
+      text-align: center;
+    }
+    .tile-title > h1 {
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 24px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      color: #fff;
+      margin: 0;
+    }
+    .tile-image {
+      text-shadow: 1px 1px 0 #000;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: left top;
+    }
+    @media (min-width: 600px) {
+      .tile {
+        -webkit-transition: all linear .5s;
+        transition: all linear .5s;
+        height: 150px;
+        padding: 20px;
+      }
+      .tile-double {
+        height: 300px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: left top;
+      }
+      .tile + .tile {
+        margin-top: 10px;
+        height: 140px;
+      }
+      .tile-icon {
+        padding: 0;
+        font-size: 60px;
+        line-height: 150px;
+      }
+      .tile-title > h1 {
+        font-size: 32px;
+      }
+    }
+
+    .card-title {
+      color: #fff;
+      float: right;
+      font-family: 'Lato', sans-serif;
+      font-weight: 300;
+      font-size: 24px;
+      text-shadow: 3px 3px 0 #000;
+      
+    }
 }
 
-.card-background-page {
+
+/* .card-background-page {
 
       ion-card {
         position: relative;
@@ -36,4 +117,4 @@ page-home {
         text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
       }
     
-    }
+    } */

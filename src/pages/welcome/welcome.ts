@@ -29,6 +29,7 @@ export class WelcomePage {
   }
 
   doPageLogin() {
+    this.assetsServices.setPreviousPage(this.navCtrl.getActive().component);        
     this.navCtrl.push(LoginPage);
   }
 

@@ -32,15 +32,15 @@ export class AuthService {
     }
   }
  
-  public register(credentials) {
-    if (credentials.email === null || credentials.username === null) {
-      return Observable.throw("Please insert credentials");
+  public register(user: User): any {
+    if (!user.username|| !user.email || !user.password) {
+      return Observable.throw("Please insert user info");
     } else {
       var repData;
       var link: string = constAuth.url + "/User"; 
-      // At this point store the credentials to your backend!
+      // store user info
       return Observable.create(observer => {
-        this.http.post(link, JSON.stringify(credentials), {headers: this.headers}).subscribe(data => {
+        this.http.post(link, JSON.stringify(user), {headers: this.headers}).subscribe(data => {
           repData = data;
           observer.next(true);          
         }, error => {

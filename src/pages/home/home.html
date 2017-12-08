@@ -7,9 +7,105 @@
     </ion-buttons>
   </ion-navbar>
 </ion-header>
-<ion-content padding class="card-background-page" >  
+
+<ion-content>
+  <ion-item>
+      <h1 ion-text class="title text-center" color="color-orange">Ready for a Trip !</h1>       
+      <h4 ion-text class="title text-center" color="primary">Select destinations below</h4>             
+    </ion-item>
+  <div class="monument-content">   
+    <div class="row">
+      <div class="col">
+        <div class="tile tile-double" [ngStyle]="{'background-image': 'url('+listCheckedDestinations[0].urlimg+')'}" 
+        (click)="toggleSelect(0)">
+            <ion-checkbox color="primary" [(checked)]="listCheckedDestinations[0].checked" disabled="true" [ngStyle]="{'opacity':'initial'}"></ion-checkbox>
+            <div class="card-title">{{listCheckedDestinations[0].name}} <br/>
+              <span style="font-size: 15px;position: absolute;padding-left: 10px;">{{listCheckedDestinations[0].secondName}} </span></div>              
+        </div>
+        
+      </div>
+      <div class="col">
+        <div class="tile royal-bg tile-image" [ngStyle]="{'background-image': 'url('+listCheckedDestinations[1].urlimg+')'}" (click)="toggleSelect(1)">
+          <ion-checkbox color="primary" [(checked)]="listCheckedDestinations[1].checked" disabled="true" [ngStyle]="{'opacity':'initial'}"></ion-checkbox>   
+          <div class="card-title">{{listCheckedDestinations[1].name}} <br/>
+            <span style="font-size: 12px;position: absolute;padding-left: 10px;">{{listCheckedDestinations[1].secondName}}</span></div>            
+        </div>
+        <div class="tile royal-bg tile-image" [ngStyle]="{'background-image': 'url('+listCheckedDestinations[2].urlimg+')'}" (click)="toggleSelect(2)">
+          <ion-checkbox color="primary" [(checked)]="listCheckedDestinations[2].checked" disabled="true" [ngStyle]="{'opacity':'initial'}"></ion-checkbox>    
+          <div class="card-title">{{listCheckedDestinations[2].name}} <br/>
+            <span style="font-size: 12px;position: absolute;padding-left: 10px;">{{listCheckedDestinations[2].secondName}}</span></div>    
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="tile royal-bg tile-image" [ngStyle]="{'background-image': 'url('+listCheckedDestinations[3].urlimg+')'}" (click)="toggleSelect(3)">
+          <ion-checkbox color="primary" [(checked)]="listCheckedDestinations[3].checked" disabled="true" [ngStyle]="{'opacity':'initial'}"></ion-checkbox>
+          <div class="card-title">{{listCheckedDestinations[3].name}} <br/>
+            <span style="font-size: 12px;position: absolute;padding-left: 10px;">{{listCheckedDestinations[3].secondName}}</span></div>  
+        </div>
+      </div>
+      <div class="col">
+        <div class="tile royal-bg tile-image" [ngStyle]="{'background-image': 'url('+listCheckedDestinations[4].urlimg+')'}" (click)="toggleSelect(4)">
+          <ion-checkbox color="primary" [(checked)]="listCheckedDestinations[4].checked" disabled="true" [ngStyle]="{'opacity':'initial'}"></ion-checkbox>
+          <div class="card-title">{{listCheckedDestinations[4].name}}  <br/>
+            <span style="font-size: 12px;position: absolute;padding-left: 10px;">{{listCheckedDestinations[4].secondName}}</span></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="tile royal-bg tile-image" [ngStyle]="{'background-image': 'url('+listCheckedDestinations[5].urlimg+')'}" (click)="toggleSelect(5)">
+          <ion-checkbox color="primary" [(checked)]="listCheckedDestinations[5].checked" disabled="true" [ngStyle]="{'opacity':'initial'}"></ion-checkbox>
+          <div class="card-title">{{listCheckedDestinations[5].name}} <br/>
+            <span style="font-size: 14px;position: absolute;padding-left: 10px;">{{listCheckedDestinations[5].secondName}}</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-100">
+        <div class="tile royal-bg tile-image" [ngStyle]="{'background-image': 'url('+listCheckedDestinations[6].urlimg+')'}" (click)="toggleSelect(6)">
+          <ion-checkbox color="primary" [(checked)]="listCheckedDestinations[6].checked" disabled="true" [ngStyle]="{'opacity':'initial'}"></ion-checkbox>
+          <div class="card-title">{{listCheckedDestinations[6].name}} <br/>
+            <span style="font-size: 14px;position: absolute;padding-left: 10px;">{{listCheckedDestinations[6].secondName}}</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="tile royal-bg tile-image" [ngStyle]="{'background-image': 'url('+listCheckedDestinations[7].urlimg+')'}" (click)="toggleSelect(7)">
+          <ion-checkbox color="primary" [(checked)]="listCheckedDestinations[7].checked" disabled="true" [ngStyle]="{'opacity':'initial'}"></ion-checkbox>        
+          <div class="card-title">{{listCheckedDestinations[7].name}} </div>
+        </div>
+        <div class="tile royal-bg tile-image" [ngStyle]="{'background-image': 'url('+listCheckedDestinations[8].urlimg+')'}" (click)="toggleSelect(8)">
+          <ion-checkbox color="primary" [(checked)]="listCheckedDestinations[8].checked" disabled="true" [ngStyle]="{'opacity':'initial'}"></ion-checkbox>        
+          <div class="card-title">{{listCheckedDestinations[8].name}}  <br/>
+            <span style="font-size: 14px;position: absolute;padding-left: 10px;">{{listCheckedDestinations[8].secondName}}</span></div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="tile tile-double" [ngStyle]="{'background-image': 'url('+listCheckedDestinations[9].urlimg+')'}" (click)="toggleSelect(9)">
+            <ion-checkbox color="primary" [(checked)]="listCheckedDestinations[9].checked" disabled="true" [ngStyle]="{'opacity':'initial'}"></ion-checkbox>
+            <div class="card-title">{{listCheckedDestinations[9].name}}  <br/>
+              <span style="font-size: 14px;position: absolute;padding-left: 10px;">{{listCheckedDestinations[9].secondName}}</span></div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class="bloc-action-button">
+      <ion-item>
+          <ion-icon color="primary" ios="ios-paper-plane" md="md-paper-plane" item-start></ion-icon>
+          N° of selected destinations
+          <ion-badge item-end>{{selectedDestinationsNumber}}</ion-badge>
+        </ion-item>
+      <button ion-button full [disabled]="selectedDestinationsNumber == 0">Next</button>
+      <button ion-button block color="color-orange">Decide later</button>      
+  </div>
+</ion-content>
+<!-- <ion-content padding class="card-background-page" >  
       <ion-card *ngFor="let s of services">
         <img [src]="s.urlImage"/>
         <div class="card-title text-style">{{s.title}}</div>
       </ion-card>
-</ion-content>
+</ion-content> -->

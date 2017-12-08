@@ -19,6 +19,7 @@ import { HomePage } from '../home/home';
 
 //import { UserProvider, UserModel } from '../../providers/user';
 import {User} from '../../models/user';
+import { AuthService } from '../../services/authService';
 
 @Component({
   selector: 'page-profile-complete',
@@ -42,13 +43,14 @@ export class ProfileCompletePage {
     public loadingCtrl  : LoadingController,
     public toastCtrl : ToastController,
     //public userProvider : UserProvider,
+    public authService: AuthService,
     public actionSheetCtrl : ActionSheetController,
     public storage      : Storage
   ) {
 
     this.form = new FormGroup({
-      photo : new FormControl(null),
-      bio   : new FormControl('', Validators.required)
+      //photo : new FormControl(null),
+      //bio   : new FormControl('', Validators.required)
     });
     this.user = navParams.get('user');    
   }
@@ -64,17 +66,15 @@ export class ProfileCompletePage {
       loading.present();
       this.user.photo = form.value.photo;
       this.app.getRootNav().setRoot(HomePage);
-      /*this.userProvider.completeProfile(this.user)
-        .then(res=> {
+      
+      /*this.authService.register(this.user).then(res => {
           loading.dismiss();
-          res.sendEmailVerification();
-          this.app.getRootNav().setRoot(TabsPage);
+          //res.sendEmailVerification();
+          this.app.getRootNav().setRoot(HomePage);
           this.storage.ready().then(() => {
             this.storage.set('password', form.value.password);
           });
-
-        })
-        .catch((error)=> {
+        }).catch((error)=> {
             loading.dismiss();
             console.log('Error: ' + JSON.stringify(error));
         });*/

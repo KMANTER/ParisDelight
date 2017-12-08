@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { TranslateService } from '@ngx-translate/core';
 import { AssetsServices } from '../services/assetsSservices';
 
-//import { HomePage } from '../pages/home/home';
+import { HomePage } from '../pages/home/home';
 //import { LandingPage } from '../pages/landing/landing';
 import { WelcomePage } from '../pages/welcome/welcome';
 import { transition } from '@angular/core/src/animation/dsl';
